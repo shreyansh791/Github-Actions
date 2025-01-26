@@ -21,10 +21,13 @@ jobs:
         run: echo "Hello Github Actions!!!"
 
       - name: Run a multi line script
-        run:
+        run: |
           echo Line 1,
           echo Line 2,
           echo Line 3
+
+
+          # With the | symbol, you can indicate that the subsequent lines are part of the same script block, which will ensure that each echo statement is executed on a separate line, producing the output you want.
 
 
 
