@@ -1,5 +1,6 @@
-name: My First Github Actions Workflow
+name: My First Github Actions Workflow # name of the workflow
 
+#event 
 on:
   push:
     branches: ["main"]
@@ -8,8 +9,9 @@ on:
 
   workflow_dispatch:
 
+#job
 jobs:
-  build:
+  build: 
     runs-on: ubuntu-latest
 
     steps:
@@ -20,9 +22,9 @@ jobs:
 
       - name: Run a multi line script
         run:
-          echo "Line 1"
-          echo "Line 2"
-          echo "Line 3"
+          - echo Line 1,
+          - echo Line 2,
+          - echo Line 3
 
 
 
