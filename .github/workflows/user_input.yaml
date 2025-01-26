@@ -18,4 +18,7 @@ jobs:
     steps:
       - name: Calculate sum
         id: sum
-        run: echo "::set-output name=sum::$((${{ inputs.number1 }} + ${{ inputs.number2 }}))"
+        run: echo $(( ${{ github.event.inputs.number1 }} + ${{ github.event.inputs.number2 }} ))
+
+      - name: Display result
+        run: echo "The sum of ${{ github.event.inputs.number1 }} and ${{ github.event.inputs.number2 }} is ${{ steps.sum.outputs.result }}"
