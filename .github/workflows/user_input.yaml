@@ -1,0 +1,21 @@
+name: Sum Numbers Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      number1:
+        type: number
+        required: true
+        description: 'First number'
+      number2:
+        type: number
+        required: true
+        description: 'Second number'
+
+jobs:
+  calculate-sum:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calculate sum
+        id: sum
+        run: echo "::set-output name=sum::$((${{ inputs.number1 }} + ${{ inputs.number2 }}))"
