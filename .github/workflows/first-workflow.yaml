@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: ["main"]
 
-  workflow_dispatch:
+  workflow_dispatch:   # this is used for executing the workflow manually.
 
 #job
 jobs:

@@ -1,0 +1,22 @@
+name: This workflow contains usage of the variables with in the workflow.
+
+on:
+  workflow_dispatch
+
+  push:
+    branches: ["main"]
+
+env:
+  name: Shreyansh Jain
+  skill: Github Actions
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Using Variables defined using env
+        run: echo $name has the knowledge of $skill
+
