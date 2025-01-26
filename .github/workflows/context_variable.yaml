@@ -1,0 +1,16 @@
+name: This workflow contains usage of the context variables with in the workflow.
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Using configuration variable
+        run: |
+          echo Repository name is ${{ github.repository }}
+          echo workflow name ${{ github.workflow }}
+          echo "Triggered By :: ${{ github.triggering_actor }}
