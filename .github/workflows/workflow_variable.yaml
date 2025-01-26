@@ -1,8 +1,8 @@
 name: This workflow contains usage of the variables with in the workflow.
 
 on:
-  push:
-    branches: ["main"]
+  # push:
+  #   branches: ["main"]
 
   workflow_dispatch: # manual trigger
 

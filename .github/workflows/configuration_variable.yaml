@@ -1,0 +1,15 @@
+name: This workflow contains usage of the configuration variables with in the workflow.
+
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Using Variables defined using env
+        run: |
+          echo Printing Configuration Variable ${{vars.PROJECT_ID}} 
