@@ -10,5 +10,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Using Variables defined using env
-        run: |
-          echo Printing Configuration Variable ${{ vars.JOB_NAME }}
+        run: echo Printing Configuration Variable ${{ vars.JOB_NAME }}
