@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
 
-  workflow_dispatch # manual trigger
+  workflow_dispatch: # manual trigger
 
 env:
   name: Shreyansh Jain
@@ -13,10 +13,16 @@ env:
 jobs:
   build: 
     runs-on: ubuntu-latest
+    env:
+      background: IT
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Using Variables defined using env
-        run: echo $name has the knowledge of $skill
+        run: |
+          echo $name has the knowledge of $skill and he is from $background
+          echo Current Year: $Year
+        env:
+          Year: 2025
 
