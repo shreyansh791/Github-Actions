@@ -11,11 +11,11 @@ jobs:
 
       - name: Using configuration variable
         run: |
-          echo Repository name is ${{ github.repository }}
-          echo workflow name ${{ github.workflow }}
-          echo "Triggered By :: ${{ github.triggering_actor }}"
-          echo "Triggered By :: ${{ github.ref }}"
-          echo "Triggered By :: ${{ github.actor }}"
-          echo "Triggered By :: ${{ github.event_name }}"
-          echo "Triggered By :: ${{ github.sha }}"
+          echo Repository name - ${{ github.repository }}
+          echo Workflow name -  ${{ github.workflow }}
+          echo "Triggered By - ${{ github.triggering_actor }}"
+          echo "Triggered By - ${{ github.actor }}"
+          echo "Github Ref - ${{ github.ref }}"
+          echo "Event - ${{ github.event_name }}"
+          echo "Github SHA - ${{ github.sha }}"
 
